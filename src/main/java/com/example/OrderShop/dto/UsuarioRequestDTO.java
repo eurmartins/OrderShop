@@ -18,4 +18,6 @@ public class UsuarioRequestDTO {
     private String email;
     @JsonProperty(required = true)
     private String senha;
+    @JsonProperty(required = true)
+    private String tipoUsuario;
 }

@@ -22,8 +22,9 @@ public class UsuarioEntity {
     private String nome;
     @Column(name = "senha", nullable = false)
     private String senha;
-    @Column(name = "email" , nullable = false)
+    @Column(name = "email" ,unique = true , nullable = false)
     private String email;
-    @Column(name = "tipoUsuario", nullable = false)
+    @Column(name = "tipoUsuario", nullable = true)
+    @Enumerated(EnumType.STRING)
     private TipoUsuario tipoUsuario;
 }
