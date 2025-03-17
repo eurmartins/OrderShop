@@ -2,6 +2,7 @@ package com.example.OrderShop.service;
 
 import com.example.OrderShop.dto.UsuarioRequestDTO;
 import com.example.OrderShop.dto.UsuarioResponseDTO;
+
 import com.example.OrderShop.mapper.UsuarioMapper;
 import com.example.OrderShop.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,11 +18,11 @@ public class UsuarioService {
     private final UsuarioMapper usuarioMapper;
 
     public UsuarioResponseDTO saveUsuario(UsuarioRequestDTO request){
-        return usuarioMapper.toDto(usuarioRepository.save(usuarioMapper.toEntity(request)));
+        return usuarioMapper.usuarioEntityToResponseDTO(usuarioRepository.save(usuarioMapper.usuarioRequestDTOToEntity(request)));
     }
 
     public List<UsuarioResponseDTO> listAllUsuarios(){
-        return usuarioMapper.toListToResponseDto(usuarioRepository.findAll());
+        return usuarioMapper.listEntityToUsuarioResponseDTO(usuarioRepository.findAll());
     }
 
     public void deleteUsuario(Long id){
