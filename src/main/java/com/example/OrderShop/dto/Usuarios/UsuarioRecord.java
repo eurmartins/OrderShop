@@ -1,4 +1,4 @@
-package com.example.OrderShop.dto;
+package com.example.OrderShop.dto.Usuarios;
 
 public record UsuarioRecord(
         String id,

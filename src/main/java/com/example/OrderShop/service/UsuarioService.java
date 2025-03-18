@@ -1,8 +1,9 @@
 package com.example.OrderShop.service;
 
-import com.example.OrderShop.dto.UsuarioRequestDTO;
-import com.example.OrderShop.dto.UsuarioResponseDTO;
+import com.example.OrderShop.dto.Usuarios.UsuarioRequestDTO;
+import com.example.OrderShop.dto.Usuarios.UsuarioResponseDTO;
 
+import com.example.OrderShop.entities.UsuarioEntity;
 import com.example.OrderShop.mapper.UsuarioMapper;
 import com.example.OrderShop.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,14 @@ public class UsuarioService {
 
     public List<UsuarioResponseDTO> listAllUsuarios(){
         return usuarioMapper.listEntityToUsuarioResponseDTO(usuarioRepository.findAll());
+    }
+
+    public UsuarioResponseDTO uptadeUsuario(Long id, UsuarioRequestDTO dto){
+        UsuarioEntity usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Usuario não encontrado!"));
+        usuarioMapper.updateUsuario(dto, usuario);
+
+        return usuarioMapper.usuarioEntityToResponseDTO(usuarioRepository.save(usuario));
     }
 
     public void deleteUsuario(Long id){

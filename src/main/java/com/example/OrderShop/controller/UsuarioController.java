@@ -1,7 +1,7 @@
 package com.example.OrderShop.controller;
 
-import com.example.OrderShop.dto.UsuarioRequestDTO;
-import com.example.OrderShop.dto.UsuarioResponseDTO;
+import com.example.OrderShop.dto.Usuarios.UsuarioRequestDTO;
+import com.example.OrderShop.dto.Usuarios.UsuarioResponseDTO;
 import com.example.OrderShop.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +27,10 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioService.listAllUsuarios());
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<UsuarioResponseDTO> updateUsuario(@PathVariable Long id, @RequestBody UsuarioRequestDTO request){
+        return ResponseEntity.ok(usuarioService.uptadeUsuario(id, request));
+    }
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUsuario(@PathVariable Long id){
         usuarioService.deleteUsuario(id);

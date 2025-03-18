@@ -1,11 +1,12 @@
 package com.example.OrderShop.mapper;
 
-import com.example.OrderShop.dto.UsuarioRecord;
-import com.example.OrderShop.dto.UsuarioRequestDTO;
-import com.example.OrderShop.dto.UsuarioResponseDTO;
+import com.example.OrderShop.dto.Usuarios.UsuarioRecord;
+import com.example.OrderShop.dto.Usuarios.UsuarioRequestDTO;
+import com.example.OrderShop.dto.Usuarios.UsuarioResponseDTO;
 import com.example.OrderShop.entities.UsuarioEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -23,4 +24,5 @@ public interface UsuarioMapper {
 
     List<UsuarioResponseDTO> listEntityToUsuarioResponseDTO(List<UsuarioEntity> list);
 
+    void updateUsuario(UsuarioRequestDTO dto, @MappingTarget UsuarioEntity entity);
 }
