@@ -13,6 +13,8 @@ import lombok.NoArgsConstructor;
 public class ProdutoDTO {
 
     @JsonProperty(required = true)
+    private Long id;
+    @JsonProperty(required = true)
     private String nome;
     @JsonProperty(required = true)
     private String descricao;
