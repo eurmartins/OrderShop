@@ -1,6 +1,5 @@
-package com.example.OrderShop.dto.Usuarios;
+package com.example.OrderShop.dto.produto;
 
-import com.example.OrderShop.enums.TipoUsuario;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,17 +7,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class UsuarioRequestDTO {
+public class ProdutoDTO {
 
     @JsonProperty(required = true)
     private String nome;
     @JsonProperty(required = true)
-    private String email;
+    private String descricao;
     @JsonProperty(required = true)
-    private String senha;
-    @JsonProperty(required = true)
-    private TipoUsuario tipoUsuario;
+    private double preco;
 }

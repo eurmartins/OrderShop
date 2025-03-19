@@ -1,6 +1,6 @@
 package com.example.OrderShop.repository;
 
-import com.example.OrderShop.dto.Usuarios.UsuarioRequestDTO;
+import com.example.OrderShop.dto.usuarios.UsuarioRequestDTO;
 import com.example.OrderShop.entities.UsuarioEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

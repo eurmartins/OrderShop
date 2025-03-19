@@ -1,7 +1,7 @@
 package com.example.OrderShop.service;
 
-import com.example.OrderShop.dto.Usuarios.UsuarioRequestDTO;
-import com.example.OrderShop.dto.Usuarios.UsuarioResponseDTO;
+import com.example.OrderShop.dto.usuarios.UsuarioRequestDTO;
+import com.example.OrderShop.dto.usuarios.UsuarioResponseDTO;
 
 import com.example.OrderShop.entities.UsuarioEntity;
 import com.example.OrderShop.mapper.UsuarioMapper;

@@ -1,7 +1,7 @@
 package com.example.OrderShop.controller;
 
-import com.example.OrderShop.dto.Usuarios.UsuarioRequestDTO;
-import com.example.OrderShop.dto.Usuarios.UsuarioResponseDTO;
+import com.example.OrderShop.dto.usuarios.UsuarioRequestDTO;
+import com.example.OrderShop.dto.usuarios.UsuarioResponseDTO;
 import com.example.OrderShop.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

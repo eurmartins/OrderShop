@@ -2,6 +2,7 @@ package com.example.OrderShop.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,15 +11,16 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class ProdutoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
-    private String name;
-    @Column(nullable = false)
+    @Column(name = "nome", nullable = false)
+    private String nome;
+    @Column(name = "descrição", nullable = false)
     private String descricao;
-    @Column(nullable = false)
+    @Column(name = "preço", nullable = false)
     private double preco;
 }

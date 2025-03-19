@@ -1,8 +1,8 @@
 package com.example.OrderShop.mapper;
 
-import com.example.OrderShop.dto.Usuarios.UsuarioRecord;
-import com.example.OrderShop.dto.Usuarios.UsuarioRequestDTO;
-import com.example.OrderShop.dto.Usuarios.UsuarioResponseDTO;
+import com.example.OrderShop.dto.usuarios.UsuarioRecord;
+import com.example.OrderShop.dto.usuarios.UsuarioRequestDTO;
+import com.example.OrderShop.dto.usuarios.UsuarioResponseDTO;
 import com.example.OrderShop.entities.UsuarioEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
