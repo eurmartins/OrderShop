@@ -17,21 +17,21 @@ public class UsuarioController {
     private final UsuarioService usuarioService;
 
 
-    @PostMapping
+    @PostMapping("/criarUsuario")
     public ResponseEntity<UsuarioResponseDTO> saveUsuario(@RequestBody UsuarioRequestDTO request){
         return ResponseEntity.ok(usuarioService.saveUsuario(request));
     }
 
-    @GetMapping
+    @GetMapping("/listarUsuarios")
     public ResponseEntity<List<UsuarioResponseDTO>> listAllUsuarios(){
         return ResponseEntity.ok(usuarioService.listAllUsuarios());
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/attUsuario/{id}")
     public ResponseEntity<UsuarioResponseDTO> updateUsuario(@PathVariable Long id, @RequestBody UsuarioRequestDTO request){
         return ResponseEntity.ok(usuarioService.uptadeUsuario(id, request));
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/deleteUsuario/{id}")
     public ResponseEntity<Void> deleteUsuario(@PathVariable Long id){
         usuarioService.deleteUsuario(id);
         return ResponseEntity.ok().build();

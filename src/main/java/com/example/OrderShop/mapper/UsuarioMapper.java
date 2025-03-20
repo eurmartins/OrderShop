@@ -1,6 +1,5 @@
 package com.example.OrderShop.mapper;
 
-import com.example.OrderShop.dto.usuarios.UsuarioRecord;
 import com.example.OrderShop.dto.usuarios.UsuarioRequestDTO;
 import com.example.OrderShop.dto.usuarios.UsuarioResponseDTO;
 import com.example.OrderShop.entities.UsuarioEntity;
@@ -19,8 +18,6 @@ public interface UsuarioMapper {
     UsuarioEntity usuarioRequestDTOToEntity(UsuarioRequestDTO dto);
 
     UsuarioResponseDTO usuarioEntityToResponseDTO(UsuarioEntity entity);
-
-    UsuarioRecord usuarioEntityToRecord(UsuarioEntity entity);
 
     List<UsuarioResponseDTO> listEntityToUsuarioResponseDTO(List<UsuarioEntity> list);
 
